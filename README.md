@@ -21,8 +21,9 @@ This project is used for calculate tip amount and split with the bill eqaully wi
 1. MVVM Architecture
 2. Live Data
 3. Viewmodels
-6. Fragments
-7. 
+4. Fragments
+5. Slider
+
 
 ## Video
 https://github.com/abhinavsingh1998/TipCalculator/assets/88830847/7a9256d5-c271-4445-a784-a4a3af34cd0c
