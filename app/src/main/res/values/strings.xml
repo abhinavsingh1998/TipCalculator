@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TipCalculator</string>
+    <string name="bill">Bill in Rs</string>
+    <string name="tip">Tip</string>
+    <string name="total_bill">Total Bill</string>
+    <string name="split">Split</string>
+    <string name="split_total">Split total</string>
+    <string name="rounding_amount">Rounding Amount</string>
+    <string name="round_up">Round Up</string>
+    <string name="round_down">Round Down</string>
+    <string name="percent_1">1%</string>
+    <string name="one">1</string>
+    <string name="none">None</string>
+    <string name="percent_0">0%</string>
+</resources>

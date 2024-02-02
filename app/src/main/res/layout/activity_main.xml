@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".activities.MainActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_base_bill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_base_bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_bill_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/bill"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_bill_amount"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_bill_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_bill_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_tip_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/tip"
+                app:layout_constraintStart_toStartOf="@+id/tv_bill_title"
+                app:layout_constraintTop_toBottomOf="@+id/et_bill_amount" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_tip_amount"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_tip_title"
+                app:layout_constraintEnd_toEndOf="@+id/et_bill_amount"
+                app:layout_constraintStart_toStartOf="@+id/et_bill_amount"
+                app:layout_constraintTop_toTopOf="@+id/tv_tip_title"
+                tools:text="Rs 59.43" />
+
+            <View
+                android:id="@+id/view_border_base_bill"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tip_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_total_bill_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/total_bill"
+                app:layout_constraintStart_toStartOf="@+id/tv_tip_title"
+                app:layout_constraintTop_toBottomOf="@+id/view_border_base_bill" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_total_bill_amount"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_total_bill_title"
+                app:layout_constraintEnd_toEndOf="@+id/tv_tip_amount"
+                app:layout_constraintStart_toStartOf="@+id/tv_tip_amount"
+                app:layout_constraintTop_toTopOf="@+id/tv_total_bill_title"
+                tools:text="Rs 452" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_edit_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_base_bill">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_edit_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_tip_edit_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/tip"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_tip_edit_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:gravity="center"
+                android:paddingHorizontal="8dp"
+                android:text="@string/percent_0"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_tip_edit_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_tip_edit_title" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/sb_tip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:max="100"
+                android:min="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tip_edit_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_split_edit_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@string/split"
+                app:layout_constraintStart_toStartOf="@+id/tv_tip_edit_title"
+                app:layout_constraintTop_toBottomOf="@+id/sb_tip" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_split_edit_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="8dp"
+                android:text="@string/one"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_split_edit_title"
+                app:layout_constraintEnd_toEndOf="@+id/tv_tip_edit_percentage"
+                app:layout_constraintStart_toStartOf="@+id/tv_tip_edit_percentage"
+                app:layout_constraintTop_toTopOf="@+id/tv_split_edit_title" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/sb_split"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:max="100"
+                android:min="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_split_edit_title" />
+
+            <View
+                android:id="@+id/view_border_edit_bill"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sb_split" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_total_split_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/split_total"
+                app:layout_constraintStart_toStartOf="@+id/tv_split_edit_title"
+                app:layout_constraintTop_toBottomOf="@+id/view_border_edit_bill" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_total_split_amount"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_total_split_title"
+                app:layout_constraintEnd_toEndOf="@+id/tv_split_edit_number"
+                app:layout_constraintStart_toStartOf="@+id/tv_split_edit_number"
+                app:layout_constraintTop_toTopOf="@+id/tv_total_split_title"
+                tools:text="Rs 452" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_rounding_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_edit_tip">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_rounding_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_rounding_amount_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/rounding_amount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/rg_rounding_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_rounding_amount_title">
+
+                <RadioButton
+                    android:id="@+id/rb_none"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/none" />
+
+                <RadioButton
+                    android:id="@+id/rb_round_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="@string/round_up" />
+
+                <RadioButton
+                    android:id="@+id/rb_round_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="@string/round_down" />
+
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
